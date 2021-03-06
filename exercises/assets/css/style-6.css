@@ -48,3 +48,8 @@ p {
    line-height: 1.6;
    margin-bottom: 20px;
 }
+
+img{
+    margin-bottom: 32px;
+    border-radius: 15px;
+}
