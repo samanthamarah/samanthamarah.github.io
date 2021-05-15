@@ -5,9 +5,9 @@ body { min-height: 100%; max-width: 1600px; margin-left: auto; margin-right: aut
 img { width: 100%; height: auto; display: block }
 
 /* Default font and colours */
-body { font-family: 'Open Sans', sans-serif; background-color: #0f2456 }
-h1, h2, h3 { color: #4799eb; font-family:'Open Sans', sans-serif }
-p, li { color: #fff; font-family:'Open Sans', serif }
+body { font-family: 'Play', sans-serif; background-color: #525252 }
+h1, h2, h3 { color: #000000; font-family:'Play', sans-serif }
+p, li { color: #fff; font-family:'Noto Serif', serif }
 
 /* Begin menu styles */
 
@@ -46,7 +46,7 @@ p, li { color: #fff; font-family:'Open Sans', serif }
 
 /* website logo fixed size in desktop menu and mobile menu bar  */
 .container-menu-desktop    a:first-child img,
-.container-menu-bar-mobile a:first-child img { width: 200px; height: 40px }
+.container-menu-bar-mobile a:first-child img { width: 200px; height: 70px }
 
 /* website logo vertically cente#ff5000 in desktop menu and mobile menu bar  */
 .container-menu-desktop    a:first-child,
@@ -112,7 +112,7 @@ p, li { color: #fff; font-family:'Open Sans', serif }
 /* style text for links and cta button  */
 .container-menu-desktop ul li a {
     font-size: calc(15px + (19 - 15) * ((100vw - 320px)/(1600 - 320)));
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Play', sans-serif;
     /* font-weight:bold */
     /* text-transform: uppercase */
 }
@@ -252,7 +252,7 @@ p, li { color: #fff; font-family:'Open Sans', serif }
 
 /* background colour */
 .menu-light { 
-	background-color: #4799eb;
+	background-color: #008682;
 	transition: all .5s ease-in-out;
 }
 
@@ -262,22 +262,22 @@ p, li { color: #fff; font-family:'Open Sans', serif }
 }
 
 /* menu links */
-.menu-light ul li a:link,  .menu-light ul li a:visited { color:#0f2456 }
-.menu-light ul li a:hover, .menu-light ul li a:active  { color: #222 }
+.menu-light ul li a:link,  .menu-light ul li a:visited { color:#fff }
+.menu-light ul li a:hover, .menu-light ul li a:active  { color: #00fffb}
 
 /* cta button */
 .menu-light ul li a.btn-cta:link, 
 .menu-light ul li a.btn-cta:visited {
     background-color: transparent;
-    color: #0f2456;
-    border-color:#0f2456
+    color: #fff;
+    border-color:#fff
 }
 
 .menu-light ul li a.btn-cta:hover,
 .menu-light ul li a.btn-cta:active {
-    background-color: #0f2456;
+    background-color: #00fffb;
     color: #fff;
-    border-color:#0f2456
+    border-color:#00fffb
 }
 
 /* on mobiles only */
@@ -326,21 +326,21 @@ a[href^=tel] { text-decoration: none; color:#0f2456 }
 
 /* menu links */
 .menu-transparent ul li a:link,  .menu-transparent ul li a:visited { color: #fff }
-.menu-transparent ul li a:hover, .menu-transparent ul li a:active  { color: #b8b8b8 }
+.menu-transparent ul li a:hover, .menu-transparent ul li a:active  { color: #008682 }
 
 /* cta button */
 .menu-transparent ul li a.btn-cta:link,
 .menu-transparent ul li a.btn-cta:visited { 
-    background-color: #0f2456;
+    background-color: #008682;
     color: #fff;
-    border-color:#0f2456;
+    border-color:#008682;
 }
 
 .menu-transparent ul li a.btn-cta:hover,
 .menu-transparent ul li a.btn-cta:active { 
     background-color: #fff;
-    color: #0f2456;
-    border-color:#0f2456
+    color: #008682;
+    border-color:#008682
 }
 
 /* on mobiles only - various content */
@@ -391,7 +391,7 @@ a[href^=tel] { text-decoration: none; color: #fff }
 }
 
 .container-hero-block.home-page {
-	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0)), url('../img/hero-home-background.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0)), url('../img/home-img.jpg');
 }
 
 .container-hero-block.portfolio-page {
@@ -404,7 +404,7 @@ a[href^=tel] { text-decoration: none; color: #fff }
 
 .container-hero-block h1, .container-hero-block h2 {
 	font-weight: 700;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Play', sans-serif;
 	text-shadow: 2px 2px #222;
 	margin-left: auto;
 	margin-right: auto;
@@ -416,7 +416,7 @@ a[href^=tel] { text-decoration: none; color: #fff }
 }
 
 .container-hero-block h2 {
-	color:  #4799eb;
+	color:  #fff;
 	line-height: 1.5;
 	font-size: calc(32px + (64 - 32) * ((100vw - 320px)/(1600 - 320)));
 }
@@ -493,13 +493,13 @@ a.button:link, a.button:visited, a.button:hover, a.button:active {
 }
  
 a.button-solid:link, .button-solid:visited {
-    background-image: linear-gradient(to right, #3498db, #2980b9);
+    background-image: linear-gradient(to right, #8500d6, #3742fa);
     color: #fff;
 } 
  
 a.button-solid:hover, .button-solid:active {
-    border-color: #3867d6;
-    background-image: linear-gradient(to right, #3742fa, #3742fa);
+    border-color: #000000;
+    background-image: linear-gradient(to right, #3742fa, #8500d6);
    color: #fff 
 }
  
@@ -522,7 +522,7 @@ a.fancy-link:hover, a.fancy-link:active {
     padding-bottom: 2px;
 }
 
-a.fancy-link:link, a.fancy-link:visited { color:#33adff; border-bottom-color:#33adff }
+a.fancy-link:link, a.fancy-link:visited { color:#00fffb; border-bottom-color:#00fffb }
 
 a.fancy-link:hover, a.fancy-link:active { color: #fff; border-bottom-color: #fff }
 
@@ -650,7 +650,7 @@ img.image-circle {
     font-size: calc(20px + (26 - 20) * ((100vw - 320px)/(1600 - 320)));
     margin-bottom:12px;
     margin-top: 42px;
-    font-weight: bold;
+    font-weight: bold
 }
 
 .container-flexbox .item-3 img {
@@ -795,7 +795,7 @@ img.image-circle {
 .container-footer { 
     text-align: center;
     color:#fff;
-    background-color:rgb(36,64,84);
+    background-color: #008682;
 }
 
 /* Desktop footer - inside padding  */
@@ -821,14 +821,14 @@ img.image-circle {
 
 /* Footer headings */
 .container-footer h4 {
-   font-family: 'PT Serif', serif;
+   font-family: 'Play', sans-serif;
    font-weight: normal;
    font-size: calc(26px + (48 - 26) * ((100vw - 320px)/(1600 - 320)));
    margin: 0 auto 16px 0;
 }
 
 .container-footer h5 {
-    font-family: sans-serif;
+    font-family: 'Play', sans-serif;
     font-weight: normal;
     font-style:  italic;
     color: #33adff;
@@ -877,7 +877,7 @@ img.image-circle {
 
 .container-footer ul.footer-links li a:hover, 
 .container-footer ul.footer-links li a:active  {
-   border-bottom-color: #33adff;
+   border-bottom-color: #00fffb;
 }
 
 /* Footer icons */
@@ -888,7 +888,7 @@ img.image-circle {
 
 .container-footer ul.footer-icons li a:hover, 
 .container-footer ul.footer-icons li a:active  {
-   color: #33adff
+   color: #00fffb
 }
 
 /* Privacy and legal link */
@@ -907,11 +907,11 @@ img.image-circle {
 
 .container-footer p a:hover, 
 .container-footer p a:active  {
-   border-bottom-color: #33adff
+   border-bottom-color: #00fffb
 }
 
 a.privacy-legal {
-    font-family: sans-serif;    
+    font-family: 'Play', sans-serif;    
     display: inline-block;
     color:#fff;
     text-decoration: none;
@@ -928,7 +928,7 @@ a.privacy-legal:visited {
 
 a.privacy-legal:active,
 a.privacy-legal:hover {
-    border-bottom-color: #33adff
+    border-bottom-color: #00fffb
 }
 
 /* == End footer CSS == */
