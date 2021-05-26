@@ -1,27 +1,36 @@
 /*  ============= WEB BROWSER RESETS ============ */
-* { margin: 0; padding: 0; border: none }
-*, *::before, *::after { box-sizing: border-box }
-html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
-scroll-behavior: smooth; scroll-padding-top: 20px }
-body { max-width: 1920px; line-height: 1.5; margin-left: auto; margin-right: auto; 
-min-height: 100vh; text-rendering: optimizeSpeed }  
+* { margin: 0; padding: 0; border: none; box-sizing: border-box }
+html { height: 100% }
+body { min-height: 100%; max-width: 1600px; margin-left: auto; margin-right: auto }  
 img { width: 100%; height: auto; display: block }
-h1, h2, h3, h4 { width: 100% }
-input, button, textarea, select { font: inherit }
+html { scroll-behavior: smooth; scroll-padding-top: 72px }
 
-/* ================= ENDS ================ */
+ /* Desktops - container height and h1 bottom margin */
+ @media (min-width: 768px) { 
+    .container-hero { height: 520px }
+    .container-hero h1 { margin-bottom: 1% }
+}
 
-/* Desktops */
-@media (min-width: 768px) { body { padding: 4% 20% } }
-
-/* Mobiles */
-@media (max-width: 767px) { body { padding: 12% 8% } }
-
+/* Mobiles - container height, text width and h1 bottom margin */
+@media (max-width: 767px) { 
+    .container-hero { height: 360px }
+    .container-hero h1 { margin-bottom: 5% }
+}
 
 /* Web page */
 body {
     background-color: #FFFFBD;
     font-family: 'Merriweather', serif;
+}
+
+/* Desktops */
+@media all and (min-width:768px) { 
+	.container-block { padding: 4% 12% 4% 12% }
+}
+
+/* Mobiles */
+@media all and (max-width:767px) { 
+	.container-block { padding:  12% 8% 12% 8% }
 }
 
 /* Main heading */
@@ -87,3 +96,240 @@ img{
     width: 100%;
     height: 100%;
 }
+
+/* Text paragraphs */
+.container-flexbox .item-col-2 p { 
+	font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1600 - 320))); 
+	color: #2F4F4F;
+	line-height: 1.6;
+	letter-spacing: 1px;	
+}
+
+/* Mobiles: center align headings, paragraphs and images within columns */
+@media all and (max-width:767px) { 
+	.container-flexbox .item-col-2 h3,
+	.container-flexbox .item-col-2 p,
+	.container-flexbox .item-col-2 img { text-align: center }
+	/* Also: bottom margin spacing under images */
+	.container-flexbox .item-col-2 img { margin-bottom: 14px }
+}
+
+/* =============== BEGIN EMAIL SIGN UP FORM CSS ============= */
+
+/* == Email signup form container == */
+
+/* All screens */
+.container-form-email-signup  { 
+	text-align: center; 
+	background-color: #fff; 
+}
+
+/* Desktop */
+@media all and (min-width:1024px) { 
+	.container-form-email-signup  {
+		margin:  4% 23% 5% 23%;
+		padding: 2% 4% 4% 4%
+	}
+}
+
+/* Mobiles */
+@media all and (max-width:1023px) { 
+	.container-form-email-signup  { 
+		margin:  6% 8% 16% 8%;
+		padding: 7% 8% 8% 8%;
+	}
+}
+
+/* == Email sign up form heading and text == */
+
+/* Heading */
+.container-form-email-signup h3 { 
+	font-family: 'Neucha', sans-serif;
+	font-weight: bold; 
+	color: #733fc0;
+	line-height: 1.2;
+	margin-bottom: 3%;
+	font-size: calc(32px + (84 - 32) * ((100vw - 320px) / (1600 - 320))); 
+}
+
+/* Text */
+.container-form-email-signup p { 
+	font-family: 'Neucha', sans-serif;	
+    font-weight: normal;
+	color: #733fc0;
+    line-height: 1.5;
+    margin-bottom: 7%;    
+	font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1600 - 320))); 
+}
+
+/* == Email sign up form fields == */
+
+#email-signup-form .flex-row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+/* Desktop */
+@media all and (min-width:768px) { 
+    #email-signup-form .flex-row { flex-direction: row }
+    #email-signup-form #email-address { flex: 1; margin: 0 30px 0 30px }
+}
+
+/* Mobiles */
+@media all and (max-width:767px) { 
+	#email-signup-form .flex-row { flex-direction: column }
+    #email-signup-form label { margin: 12px 0 0 0 }
+    #email-signup-form #email-address { margin: 0 }
+}
+
+#email-signup-form label,
+#email-signup-form input,
+#email-signup-form #btn-submit {
+	font-size: 16px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+#email-signup-form label { 
+	padding: 14px 0; 
+	font-family: sans-serif; 
+	font-size: 18px
+}
+
+#email-signup-form label,
+#email-signup-form #btn-submit { font-weight: bold }
+
+#email-signup-form input,
+#email-signup-form #btn-submit { padding: 12px 20px }
+
+#email-signup-form ::placeholder { font-size: 96% }
+
+#email-signup-form input {
+	background-color: #f0f0f0;
+	padding: 10px 12px;
+	border: 2px solid #d1274b;
+}
+
+#email-signup-form input:focus { 
+	background-color: #fff; 
+}
+
+#email-signup-form #btn-submit {
+	color: #fff;
+	border: none;
+	padding: 12px 22px;
+	background-color: #d1274b;
+	border-radius: 50px;
+ }
+ 
+ #email-signup-form #btn-submit:focus,
+ #email-signup-form #btn-submit:hover {
+	background-color: #733fc0;
+ }
+
+#email-signup-form #btn-submit i {
+	margin-left: 8px
+}
+
+/* Mobiles */
+@media all and (max-width:767px) { 
+	#email-signup-form label { padding: 0 0 14px 0  }
+	#email-signup-form input { margin: 0 0 24px 0 }
+	#email-signup-form #btn-submit { margin: 30px auto 0 auto; width: 80% }
+}
+
+/* =============== END EMAIL SIGN UP FORM CSS ============= */
+
+/* == Begin footer CSS == */
+
+/* Outer footer parent container */
+.container-footer { 
+	display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap;
+    background-color:#4f16b8
+}
+
+/* Desktop footer - inside padding  */
+@media all and (min-width:768px) {
+	.container-footer { padding: 3% 8% 3% 8% }
+}
+
+/* Mobiles footer - inside padding */
+@media all and (max-width:767px) {
+	.container-footer { padding: 12% 8% 1% 8% }
+}
+
+/* Inner footer columns */
+
+/* Desktops - 3 columns */
+@media all and (min-width:768px) { 
+   .container-footer .item-3:nth-child(1) { width: 20% }
+   .container-footer .item-3:nth-child(2) { 
+      width: 50%;
+      /* text-align: center */
+   }
+   .container-footer .item-3:nth-child(3) { 
+      width: 20%;
+   }
+}
+
+/* Mobiles - 1 column */
+@media all and (max-width:767px) { 
+	.container-footer .item-3 { 
+      width: 100%;
+      margin-bottom: 10%
+   }
+   .container-footer .item-3:nth-child(2) { order: 1 }
+   .container-footer .item-3:nth-child(1) { order: 2 }
+   .container-footer .item-3:nth-child(3) { order: 3 } 
+}
+
+/* Styles for footer background, text, icons and links */
+
+.container-footer .item-3 h4,
+.container-footer .item-3 p,
+.container-footer .item-3 p i,
+.container-footer .item-3 p a {
+   color: #fff
+}
+
+.container-footer .item-3 h4 {
+   font-weight: bold;
+   /* text-transform: uppercase */
+   margin-bottom: 12px;
+   font-size: calc(22px + (26 - 22) * ((100vw - 320px)/(1600 - 320)));
+   letter-spacing: 1px;
+}
+
+.container-footer .item-3 p {
+   font-weight: normal;
+   margin-bottom: 12px;
+   font-size: calc(17px + (22 - 17) * ((100vw - 320px)/(1600 - 320)));
+   line-height: 1.6;
+   letter-spacing: 1px;
+}
+
+.container-footer .item-3 i { 
+   padding-right: 32px;
+} 
+
+.container-footer .item-3 p a {
+   text-decoration: none;
+   border-bottom-style: solid;
+   border-bottom-width: 2px;
+   padding-bottom:2px;
+}
+
+.container-footer .item-3 p a:link, 
+.container-footer .item-3 p a:visited  {
+   border-bottom-color: transparent;
+}
+
+.container-footer .item-3 p a:hover, 
+.container-footer .item-3 p a:active  {
+   border-bottom-color: #fff
+}
+
+/* == End footer CSS == */
